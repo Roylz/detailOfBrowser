@@ -1,26 +1,26 @@
-  function Is() {
-  var agent = navigator.userAgent.toLowerCase();
-  this.major = parseInt(navigator.appVersion);  //major Verison of browser
-  this.minor = parseFloat(navigator.appVersion);// Detail of browser
-  this.ns = ((agent.indexOf('mozilla')!=-1) &&
-             ((agent.indexOf('spoofer')==-1) && //is or isn't Netscape
-              (agent.indexOf('compatible') == -1)));
-  this.ns2 = (this.ns && (this.major == 3));    //is or isn't Netscape 2
-  this.ns3 = (this.ns && (this.major == 3));    //is or isn't Netscape 3
-  this.ns4b = (this.ns && (this.minor < 4.04)); //is or isn't Netscape 4 lower version
-  this.ns4 = (this.ns && (this.major >= 4));    //is or isn't Netscape 4 higher version
-  this.ie = (agent.indexOf("msie") != -1);      //is or isn't IE
-  this.ie3 = (this.ie && (this.major == 2));    //is or isn't IE 3
-  this.ie4 = (this.ie && (this.major >= 4));    //is or isn't IE 4
-  this.op3 = (agent.indexOf("opera") != -1);    //is or isn't Opera 3
-  this.win = (agent.indexOf("win")!=-1);        //is or isn't Windows version
-  this.mac = (agent.indexOf("mac")!=-1);        //is or isn't Macintosh version
-  this.unix = (agent.indexOf("x11")!=-1);       //is or isn't Unix version
+function Is() {
+	var agent = navigator.userAgent.toLowerCase();
+	this.major = parseInt(navigator.appVersion);  //major Verison of browser
+	this.minor = parseFloat(navigator.appVersion);// Detail of browser
+	this.ns = ((agent.indexOf('mozilla')!=-1) &&
+	             ((agent.indexOf('spoofer')==-1) && //is or isn't Netscape
+	              (agent.indexOf('compatible') == -1)));
+	this.ns2 = (this.ns && (this.major == 3));    //is or isn't Netscape 2
+	this.ns3 = (this.ns && (this.major == 3));    //is or isn't Netscape 3
+	this.ns4b = (this.ns && (this.minor < 4.04)); //is or isn't Netscape 4 lower version
+	this.ns4 = (this.ns && (this.major >= 4));    //is or isn't Netscape 4 higher version
+	this.ie = (agent.indexOf("msie") != -1);      //is or isn't IE
+	this.ie3 = (this.ie && (this.major == 2));    //is or isn't IE 3
+	this.ie4 = (this.ie && (this.major >= 4));    //is or isn't IE 4
+	this.op3 = (agent.indexOf("opera") != -1);    //is or isn't Opera 3
+	this.win = (agent.indexOf("win")!=-1);        //is or isn't Windows version
+	this.mac = (agent.indexOf("mac")!=-1);        //is or isn't Macintosh version
+	this.unix = (agent.indexOf("x11")!=-1);       //is or isn't Unix version
 
 }
 
 var is = new Is();
-if(is.win)
-  document.write("yes");
-else
-	document.write("No");
+	if(is.win)
+ 		document.write("yes");
+	else
+		document.write("No");
